@@ -1,0 +1,18 @@
+/**
+ * 发送post请求
+ * @param {String} url 请求的url
+ * @param {String} data 请求的body
+ * @returns {Promise}
+ */
+function post (url, data) {
+  return window.fetch(url, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(data),
+    credentials: 'same-origin'
+  })
+}
+
+export default post
